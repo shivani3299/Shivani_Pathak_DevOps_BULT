@@ -1,0 +1,20 @@
+Develop a script that creates, sets and displays two variables to the terminal when run. 
+Within this script, add comments to explain what the script is doing, what each variable is and, 
+
+using inline comments, what each command is doing.
+
+#!/bin/bash
+
+#simple note taking script
+
+#get date
+date=$(date)
+
+#get topic of note
+topic=$1
+
+#user input of note will be displayed
+read -p "Your note:" note
+
+echo date:$note >> ~/${topic}notes.txt
+echo Note "$note" saved 
