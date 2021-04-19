@@ -21,10 +21,10 @@ List the contents of a directory and their attributes
 => ls 
 
 Long list the content with file, directory ownership, permissions,sizes, etc…
-=> ls -l
+=> ls -i
 
 Display the size of the file in human readable format
-=> ls -lah
+=> ls -lh
 
 Show all files and folders including hidden one
 => ls -la or ls -l -a
@@ -39,7 +39,7 @@ Sort the files by last time modified displaying the newest first.
 => ls -lt
 
 Diplay the location of a program/command, where it is installed.
-=>
+=>real
 
 
 Which command is used to switch directory from one to another
@@ -238,11 +238,18 @@ Making a variable accessible from other the shell in the system.
 Show the real life use case of exporting a variable
 =>Export is a built-in command of the Bash shell. It is used to mark variables and functions to be passed to child processes.
   Basically, a variable will be included in child process environments without affecting other environments.
-  
+ export [-f] [-n] [name[=value] ...]
 
 Convert the above script file into a command, The file should run with "myappp" instead of "myapp.sh"
+=>Give execution rights to the script file using chmod u+x file_name.sh
+ Append the path of the executable  script file to PATH cariable in .bash_profile file.
+Write a code in script file starting with shebang "#!/usr/bin/env bash" and then save it.
+Now you need to secure .bash_profile once then you can run your myapp.sh as a command
+
 
 What is Globbing? Explain in depth with examples?
+=>Globbing is an operation that recognizes the wildcard pattern and expands it into its path name.
+
 
 List all entries with extension ".sh"
 =>ls *.sh

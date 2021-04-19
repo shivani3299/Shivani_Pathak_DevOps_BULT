@@ -12,3 +12,25 @@ capture the gender as a command line parameter.
 test the command line parameter and call the 
 appropriate functions in order to display the 
 characteristics of the indicated gender.
+
+#!/bin/bash
+
+function local
+{
+	local var=$1
+	local var1=$1
+	read -p "How many legs does human have" var
+	read -p "How many arms does human have" var1
+	echo "$var $var1"
+ 	
+	read -p "Enter gender(male or female)" gen
+	case $gen in
+	male)
+		echo "Male have beard";;
+	female)
+		echo "Female doesn't have beard";;
+	*)
+		echo "Error";;
+	esac
+}
+local

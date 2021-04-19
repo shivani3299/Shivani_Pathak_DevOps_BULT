@@ -10,3 +10,26 @@ use CTL-C, CTL-Z or a KILL command to terminate the
 application. Add a 'trap' in the script to capture those
 attempts and provide instructions on how to exit the 
 script using the menu choice instead.
+
+#!/bin/bash
+
+read -p "enter Your Choice (Option1,option2,option3)" opt
+
+do
+	case $op in
+		option1)
+			echo "Your choice is 1";;
+		option2)
+			echo "Your choice is 2";;
+		option3)
+			echo "Your choice is 3";;
+		*)
+			trap no_ctrlc SIGINT
+			while true
+			do
+				echo sleeping
+				sleep 10
+			done
+		echo "ERROR $REPLY"
+	esac
+done
