@@ -9,3 +9,14 @@ If it was successful, indicate success and display the
 contents of the directory. If it was not successful, 
 indicate we cannot change directories and exit to the 
 terminal with a custom exit code (less than 200).
+
+#!/bin/bash
+
+var= ls $1 2>/dev/null
+
+if[[$? = 0]]
+then 
+echo "Successful"
+else
+echo "not successful"
+fi
