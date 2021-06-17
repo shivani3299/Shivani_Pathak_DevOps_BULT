@@ -10,3 +10,10 @@ Git commands are given as follows:=
 
 git init
 git status 
+git log
+git add . or git add file_name
+git commit -m "commi_message"
+git commit -am "commit_message"
+git remote add origin github_link
+git push -u origin
+git reflog
